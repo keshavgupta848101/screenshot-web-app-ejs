@@ -4,6 +4,7 @@ const app = express();
 const ejs = require("ejs");
 const path = require("path");
 var multer = require("multer");
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname + "uploads")));
 
@@ -81,7 +82,7 @@ app.get("/result", async (req, res) => {
   res.render("result", { findData });
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("Server running on port 3000");
 });
 
