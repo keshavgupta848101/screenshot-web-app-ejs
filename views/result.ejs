@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Database</title>
     <style>
+      body {
+        font-family: "Lucida Sans", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #dcddde;
+      }
+      .heading {
+        text-align: center;
+        color: teal;
+      }
       section {
         display: flex;
         flex-wrap: wrap;
@@ -19,11 +27,66 @@
 
         margin-top: 8px;
         vertical-align: middle;
+        border: 2px solid teal;
+        margin: 5px;
+
+        /* width: 100%;
+        padding: 10px;
+        margin: 8px; */
+        box-shadow: 1px 1px 1px 1px teal;
+      }
+
+      .button {
+        border-radius: 4px;
+        background-color: white;
+        border: none;
+        color: teal;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        width: 220px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .button:hover {
+        border: 1px solid teal;
+      }
+
+      a {
+        color: teal;
+        font-weight: 900;
       }
     </style>
   </head>
   <body>
-    <h1>Database</h1>
+    <h1 class="heading">/Database</h1>
     <section>
       <% for (const property in findData) { %>
 
@@ -35,6 +98,8 @@
       <% } %>
     </section>
 
-    <a href="/home">Add another Screenshot</a>
+    <button class="button">
+      <span><a href="/home">Add another Screenshot</a></span>
+    </button>
   </body>
 </html>
