@@ -1,4 +1,4 @@
-# ScreenShot Snippet
+# ScreenShot Snippet Web App
 ScreenShot Snippet a web app which uses mongodb as a  database to store your most important screeshot.
 
 # 1. Main Screen
